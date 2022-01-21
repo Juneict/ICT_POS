@@ -1,0 +1,7 @@
+orders table
+order_details
+products
+suppliers
+transactions 
+companies
+settings
