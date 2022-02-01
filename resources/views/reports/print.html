@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Invoice</title>
+        <style>
+            
+            .invoice-pos{
+                height: 210mm;
+                width: 148.5mm;
+                margin: 0 auto;
+            }
+            .invoice-pos .header{
+                min-height: 120px;
+            }
+            .invoice-pos .header .logo{
+                width: 120px;
+                margin: auto;
+            }
+            .invoice-pos .header .info{
+                font-size: 23px;
+                text-align: center;
+            }
+            .invoice-pos .header .address{
+                font-size: 12px;
+                text-align: center;
+            }
+            .invoice-pos .content .content-header{
+                text-align: center;
+            }
+            .invoice-pos .content .row{
+                width: 100%;
+            }
+            .invoice-pos .content .row .col-cus-info{
+                width: 350px;
+                display: block;
+                float: left;
+               
+            }
+            .invoice-pos .content .row  .col-invoice-info ul{
+                list-style: none;
+                text-decoration: none;
+                float: left;
+            }
+            .invoice-pos .content .row .col-cus-info ul{
+                list-style: none;
+                text-decoration: none;
+            }
+            .invoice-pos .table .invoice-table{
+                width: 148.5mm;
+                padding: 20px;
+                margin: 10px;
+               
+            }
+            .invoice-pos .table .invoice-table .table-title{
+                border: 1px solid black;
+                font-weight: bold;
+                font-size: large;
+                text-align: left;
+            }
+            
+            .invoice-pos .footer .sign{
+                width: 180px;
+                float: left;
+                padding-top: 120px;
+                display: block;
+                text-align: center;
+            }
+            .invoice-pos .note {
+                font-size: 12px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="invoice-pos">
+            <div class="header">
+                <div class="logo">
+                    <img src="/public/img/adminlogo.png" alt="" />
+                </div>
+                <div class="info">Computer Sales & Services</div>
+                <div class="address">
+                    <p>အမှတ်(၁၀/၁၁)၊ ပထမထပ်၊ အဆင့်မြင့် သုံးထပ်ဈေး၊လမ်းငါးသွယ်၊စိုးကောမင်းရပ်ကွက်၊မကွေးမြို့။
+                    </br>Phone:Ph : 09-785433166 (Laptop Service) , 09-43009421  (Desktop &  Printer Service)
+                    </p>
+                </div>
+            </div>
+            <hr>
+            <div class="content">
+                <div class="content-header">
+                    <h3>Sale Voucher</h3>
+                </div>
+                <div class="row">
+                    <div class="col-cus-info">
+                        <ul>
+                            <li>Customer : U Hla</li>
+                            <li>Phone : 094322332</li>
+                            <li>Address : </li>
+                        </ul>
+                       
+                    </div>
+                    <div class="col-invoice-info">
+                        <ul>
+                            <li>Voucher No : 2332</li>
+                            <li>Date : 27-1-2022</li>
+                            <li>Payment :Cash</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="table">
+                <table class="invoice-table">
+                    <tr class="table-title" >
+                        <td class="title"style="border-bottom: 1px solid #ddd;" >No</td>
+                        <td class="title"style="border-bottom: 1px solid #ddd;">Item Name</td>
+                        <td class="title"style="border-bottom: 1px solid #ddd;">Qty</td>
+                        <td class="title" style="border-bottom: 1px solid #ddd;">Price</td>
+                        <td class="title"style="border-bottom: 1px solid #ddd;">Amount</td>
+                    </tr>
+                    <tr class="table-item">
+                        <td style="border-bottom: 1px solid #ddd;">1</td>
+                        <td style="border-bottom: 1px solid #ddd;">Hp hs04</td>
+                        <td style="border-bottom: 1px solid #ddd;">1</td>
+                        <td style="border-bottom: 1px solid #ddd;"> 54,000</td>
+                        <td style="border-bottom: 1px solid #ddd;">54,000</td>
+                    </tr>
+                    <tr >
+                        <td ></td>
+                        <td ></td>
+                        <td ></td>
+                        <td style="border-bottom: 1px solid #ddd;">Total Amount</td>
+                        <td style="border-bottom: 1px solid #ddd;"> 54,000</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td style="border-bottom: 1px solid#ddd;">Cash Received</td>
+                        <td style="border-bottom: 1px solid #ddd;">54,000</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td style="border-bottom: 1px solid #ddd;">Balance</td>
+                        <td style="border-bottom: 1px solid #ddd;">54,000</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="footer">
+                <div class="sign">
+                    <br>
+                    ----------------<br>
+                    <span> Customer's Sign</span>
+                </div>
+                <div class="sign">
+                    <br>
+                    ----------------<br>
+                    <span>Authorized Sign</span>
+                </div>
+                <div class="sign">
+                    Jan 01, 2022 <br>
+                    ----------------<br>
+                    <span>Received Date</span>
+                </div>
+                
+            </div>
+            <div class="note">
+                
+                <p><br> ဝယ်ယူအားပေးမှူကို အထူးကျေးဇူးတင်ပါသည်။</p>
+            </div>
+        </div>
+    </body>
+</html>
