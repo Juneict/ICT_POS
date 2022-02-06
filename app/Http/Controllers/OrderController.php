@@ -3,14 +3,15 @@
 namespace App\Http\Controllers;
 
 
-use App\Models\Order;
+use DB;
 
+use App\Models\Cart;
+use App\Models\Order;
 use App\Models\Product;
 use App\Models\Transaction;
 use App\Models\Order_Detail;
-use Illuminate\Http\Request;
-use DB;
 
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 class OrderController extends Controller
@@ -78,7 +79,7 @@ class OrderController extends Controller
             $transactions->transac_amount =$order_details->amount;
             $transactions->transac_date =date('Y-m-d');
             $transactions->save();
-
+            Cart::where('user_id',auth()->user()->id)->delete();
             //last order history
             $products = Product::all();
             $order_details= Order_Detail::where('order_id',$order_id)->get();
