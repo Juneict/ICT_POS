@@ -55,8 +55,8 @@
             
             .invoice-pos .footer .sign{
                 width: 180px;
-                float: left;
                 padding-top: 120px;
+                float: left;
                 display: block;
                 text-align: center;
             }
@@ -87,18 +87,24 @@
                 <div class="row">
                     <div class="col-cus-info">
                         <ul>
-                            <li>Customer : U Hla</li>
-                            <li>Phone : 094322332</li>
+                            @foreach ($order_customer as $customer)
+                                <li>Customer :{{$customer->name}}</li>
+                                <li>Phone :{{$customer->phone}}</li>
+                           
+                            
+                             @endforeach
                             <li>Address : </li>
                         </ul>
                        
                     </div>
                     <div class="col-invoice-info">
+                        @foreach($order_customer as $customer)
                         <ul>
-                            <li>Voucher No : 2332</li>
-                            <li>Date : 27-1-2022</li>
+                            <li>Voucher No :{{$customer->id}} </li>
+                            <li>Date :{{ $customer->created_at->format('Y-m-d') }}</li>
                             <li>Payment :Cash</li>
                         </ul>
+                       @endforeach
                     </div>
                 </div>
             </div>
@@ -116,6 +122,7 @@
                         <td style="border-bottom: 1px solid #ddd;">{{$key+1}}</td>
                         <td style="border-bottom: 1px solid #ddd;">{{$receipt->product->product_name}}</td>
                         <td style="border-bottom: 1px solid #ddd;">{{$receipt->quantity}}</td>
+                        
                         <td style="border-bottom: 1px solid #ddd;">{{number_format($receipt->unitprice)}}</td>
                         <td style="border-bottom: 1px solid #ddd;">{{number_format($receipt->amount)}}</td>
                     </tr>
@@ -141,11 +148,16 @@
                     </tr>
                 </table>
             </div>
+            <div class="note">
+                
+                <p><br> ဝယ်ယူအားပေးမှူကို အထူးကျေးဇူးတင်ပါသည်။</p>
+            </div>
             <div class="footer">
+                
                 <div class="sign">
                     <br>
                     ----------------<br>
-                    <span> Customer's Sign</span>
+                    <span>Customer Sign</span>
                 </div>
                 <div class="sign">
                     <br>
@@ -153,14 +165,11 @@
                     <span>Authorized Sign</span>
                 </div>
                 <div class="sign">
-                    Jan 01, 2022 <br>
+                    <br>
                     ----------------<br>
-                    <span>Received Date</span>
+                    <span>Receive Date</span>
                 </div>
-                
             </div>
-            <div class="note">
-                
-                <p><br> ဝယ်ယူအားပေးမှူကို အထူးကျေးဇူးတင်ပါသည်။</p>
-            </div>
+            
         </div>
+        

@@ -26,8 +26,10 @@ class OrderController extends Controller
         $products =Product::all();
         $orders =Order::all();
         $lastID =Order_Detail::max('order_id');
+        $lastCusID =Order::max('id');
         $order_receipt = Order_Detail::where('order_id',$lastID)->get();
-        return view('orders.index',compact('products','orders','order_receipt'));
+        $order_customer =Order::where('id',$lastCusID)->get();
+        return view('orders.index',compact('products','orders','order_receipt','order_customer'));
     }
 
     /**
