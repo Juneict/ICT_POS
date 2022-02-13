@@ -131,7 +131,7 @@
                     
                     
                     
-                    @endforeach
+                   
                     <tr>
                         <td></td>
                         <td></td>
@@ -139,6 +139,7 @@
                         <td style="border-bottom: 1px solid#ddd;">Discount%</td>
                         <td style="border-bottom: 1px solid #ddd;">{{$receipt->discount ? ' ' :'0'}}</td>
                     </tr>
+                    @endforeach
                     <tr>
                         <td></td>
                         <td></td>
