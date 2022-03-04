@@ -9,13 +9,16 @@
                 min-height: 120px;
             }
             .invoice-pos .header .logo{
-               
+               align-content: center;
+                left: 250px;
+                right: 450px;
             }
             .invoice-pos .header .info{
                 font-size: 23px;
                 text-align: center;
             }
             .invoice-pos .header .address{
+               
                 font-size: 12px;
                 text-align: center;
             }
@@ -69,13 +72,14 @@
 <div class="invoice-pos">
             <div class="header">
                 <div class="logo">
-                    <img src="{{ asset('public/img/adminlogo.png') }}" alt="">
+                    
                 </div>
-                <div class="info"><strong> ICT Technology</strong> <br>
-                    Computer Sales & Services</div>
+                
                 <div class="address">
+                    <img src="{{ asset('/img/adminlogo.png') }}" alt="">
+                    <h2>Computer Sales & Services</h2>
                     <p>အမှတ်(၁၀/၁၁)၊ ပထမထပ်၊ အဆင့်မြင့် သုံးထပ်ဈေး၊လမ်းငါးသွယ်၊စိုးကောမင်းရပ်ကွက်၊မကွေးမြို့။
-                    <br>  Phone:Ph : 09-785433166 (Laptop Service) , 09-43009421  (Desktop &  Printer Service)
+                    <br>  Phone: 09-785433166 (Laptop Service) , 09-43009421  (Desktop &  Printer Service)
                     </p>
                 </div>
             </div>

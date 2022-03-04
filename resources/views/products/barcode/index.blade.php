@@ -32,7 +32,7 @@
                                           <div class="card-body">
                                             <h5 class="text-center"  >{{ $barcode->product_name }}</h5>
                                             <h5 class="text-center" >{{ $barcode->price }} mmk</h5>
-                                           
+                                            {{-- <img src="{{ asset('product/barcodes/'.$barcode->barcode )}}" alt=""> --}}
                                              {!! $barcode->barcode !!}
                                              <h4 class="text-center" style="margin-top:0.5em" >{{ $barcode->product_code }}</h4>
                                           </div>
